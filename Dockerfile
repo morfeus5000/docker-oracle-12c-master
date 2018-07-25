@@ -18,6 +18,7 @@ VOLUME ["/docker-entrypoint-initdb.d"]
 
 ENTRYPOINT ["/entrypoint.sh"]
 
+
 VOLUME /u01/app/oracle/product/12.1.0/xe/dbs
 VOLUME /u01/app/oracle/oradata
 
