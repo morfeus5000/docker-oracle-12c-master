@@ -11,6 +11,9 @@ ADD entrypoint.sh /entrypoint.sh
 
 RUN apt-get update && apt-get -y install curl && apt-get clean && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/* 
 
+VOLUME /Users/morfeus5000/Documents/Kitematic/:/u01/app/oracle/product/12.1.0/xe/dbs
+VOLUME /Users/morfeus5000/Documents/Kitematic/:/u01/app/oracle/oradata
+
 EXPOSE 1521
 EXPOSE 8080
 
