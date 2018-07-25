@@ -1,7 +1,7 @@
 Oracle Standard Edition 12c Release 1
 ============================
 
-[![](https://badge.imagelayers.io/sath89/oracle-12c:latest.svg)](https://imagelayers.io/?images=sath89/oracle-12c:latest 'Get your own badge on imagelayers.io')
+[![](https://badge.imagelayers.io/sath89/oracle-12c:latest.svg)](https://imagelayers.io/?images=leviatan/oracle-12c:latest 'Get your own badge on imagelayers.io')
 
 Oracle Standard Edition 12c Release 1 on Ubuntu
 This **Dockerfile** is a [trusted build](https://registry.hub.docker.com/u/sath89/oracle-12c/) of [Docker Registry](https://registry.hub.docker.com/).
@@ -69,7 +69,7 @@ By Default web management console is enabled. To disable add env variable:
 
 Start with additional init scripts or dumps:
 
-    docker run -d -p 1521:1521 -v /my/oracle/data:/u01/app/oracle -v /my/oracle/init/SCRIPTSorSQL:/docker-entrypoint-initdb.d sath89/oracle-12c
+    docker run -d -p 1521:1521 -v /my/oracle/data:/u01/app/oracle -v /my/oracle/init/SCRIPTSorSQL:/docker-entrypoint-initdb.d leviatan/oracle-12c
     
 By default Import from `docker-entrypoint-initdb.d` is enabled only if you are initializing database (1st run).
 
