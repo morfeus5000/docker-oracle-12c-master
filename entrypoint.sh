@@ -4,10 +4,10 @@ set -e
 # Prevent owner issues on mounted folders, if desired
 if [ "$ENABLE_OWNERSHIP_FIX" = true ] ; then
 	chown -R oracle:dba /u01/app/oracle
-	chown -R oracle:dba /docker-entrypoint-initdb.d/
+	chown -R oracle:dba /docker-entrypoint-initdb.d/4
 fi
 
-rm -f /u01/app/oracle/product
+#rm -f /u01/app/oracle/product
 ln -s /u01/app/oracle-product /u01/app/oracle/product
 
 #Run Oracle root scripts
@@ -60,7 +60,7 @@ case "$1" in
 			echo "XE:$ORACLE_HOME:N" >> /etc/oratab
 			chown oracle:dba /etc/oratab
 			chmod 664 /etc/oratab
-			rm -rf /u01/app/oracle-product/12.1.0/xe/dbs
+#			rm -rf /u01/app/oracle-product/12.1.0/xe/dbs
 			ln -s /u01/app/oracle/dbs /u01/app/oracle-product/12.1.0/xe/dbs
 			#Startup Database
 			su oracle -c "/u01/app/oracle/product/12.1.0/xe/bin/tnslsnr &"
